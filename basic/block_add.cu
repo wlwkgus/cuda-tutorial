@@ -18,7 +18,7 @@ int main(void){
     int *a, *b, *c;
     // input to device
     int *d_a, *d_b, *d_c;
-    int size = sizeof(int)
+    int size = sizeof(int);
 
     // malloc d_a
     cudaMalloc((void**) &d_a, size);
