@@ -25,6 +25,7 @@ int main(void){
     cudaMemcpy(d_b, &b, size, cudaMemcpyHostToDevice);
 
     add<<<1, 1>>>(d_a, d_b, d_c);
+    cout << c << endl;
 
     cudaMemcpy(&c, d_c, size, cudaMemcpyDeviceToHost);
 
