@@ -22,15 +22,15 @@ int main(void){
     int *a, *b, *c;
     // input to device
     int *d_a, *d_b, *d_c;
-    int size = N * sizeof(int)
+    int size = N * sizeof(int);
 
     // malloc d_a
     cudaMalloc((void**) d_a, size);
     cudaMalloc((void**) d_b, size);
     cudaMalloc((void**) d_c, size);
 
-    a = (int *) malloc(size); random_ints(a, N)
-    b = (int *) malloc(size); random_ints(a, N)
+    a = (int *) malloc(size); random_ints(a, N);
+    b = (int *) malloc(size); random_ints(b, N);
     c = (int *) malloc(size);
 
     cudaMemcpy(d_a, a, size, cudaMemcpyHostToDevice);
