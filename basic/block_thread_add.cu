@@ -11,7 +11,7 @@ __global__ void add(int *a, int *b, int *c, int n){
         c[index] = a[index] + b[index];
 }
 
-void random_ints(int* a, int n){
+void random_ints(int* a, long n){
     for(int i=0; i < n; i++){
         a[i] = rand();
     }
