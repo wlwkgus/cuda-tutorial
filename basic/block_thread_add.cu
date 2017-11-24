@@ -11,6 +11,12 @@ __global__ void add(int *a, int *b, int *c, int n){
         c[index] = a[index] + b[index];
 }
 
+void random_ints(int* a, int n){
+    for(int i=0; i < n; i++){
+        a[i] = rand();
+    }
+}
+
 int main(void){
     // input
     int *a, *b, *c;
@@ -23,8 +29,8 @@ int main(void){
     cudaMalloc((void**) d_b, size);
     cudaMalloc((void**) d_c, size);
 
-    a = (int *) malloc(size);
-    b = (int *) malloc(size);
+    a = (int *) malloc(size); random_ints(a, N)
+    b = (int *) malloc(size); random_ints(a, N)
     c = (int *) malloc(size);
 
     cudaMemcpy(d_a, a, size, cudaMemcpyHostToDevice);

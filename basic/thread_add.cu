@@ -8,6 +8,12 @@ __global__ void add(int *a, int *b, int *c){
     c[threadIdx.x] = a[threadIdx.x] + b[threadIdx.x];
 }
 
+void random_ints(int* a, int n){
+    for(int i=0; i<n; i++){
+        a[i] = rand();
+    }
+}
+
 int main(void){
     // input
     int *a, *b, *c;
