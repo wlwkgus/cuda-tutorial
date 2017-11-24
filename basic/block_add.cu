@@ -7,10 +7,11 @@ __global__ void add(int *a, int *b, int *c){
     c[blockIdx.x] = a[blockIdx.x] + b[blockIdx.x];
 }
 
-void random_ints(int* a, int N){
-    for(int i=0; i < N; i++)
+void random_ints(int* a, N){
+    int i;
+    for(i=0; i < N; i++){
         a[i] = rand();
-    
+    }
 }
 
 int main(void){
