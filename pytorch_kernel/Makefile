@@ -2,7 +2,7 @@ PYTHON := python
 NVCC_COMPILE := nvcc -c -o
 RM_RF := rm -rf
 
-NVCC_FLAGS := -x cu Xcompiler -fPIC -shared
+NVCC_FLAGS := -x cu -Xcompiler -fPIC -shared
 
 BUILD_DIR := build
 INCLUDE_DIRS := include
